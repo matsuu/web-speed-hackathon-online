@@ -13,4 +13,8 @@ jobs:
           npm install -g @lhci/cli@0.4.x
           lhci autorun
       - run: |
-          for f in lhci/*.json ; do echo $f ; cat $f ; done
+          jq . manifest.json
+      - uses: actions/upload-artifact@v2
+        with:
+          name: lhci
+          path: lhci
