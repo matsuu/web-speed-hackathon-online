@@ -12,3 +12,5 @@ jobs:
       - run: |
           npm install -g @lhci/cli@0.4.x
           lhci autorun
+      - run: |
+          for f in lhci/*.json ; do echo $f ; cat $f ; done
