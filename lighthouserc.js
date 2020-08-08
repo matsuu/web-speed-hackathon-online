@@ -1,6 +1,7 @@
 module.exports = {
   ci: {
     collect: {
+      numberOfRuns: 1,
       url: [
         'http://localhost:3000/',
         'http://localhost:3000/b0000',
@@ -11,6 +12,7 @@ module.exports = {
       startServerCommand: 'yarn serve'
     },
     upload: {
+      target: 'filesystem',
       outputDir: './lhci'
     }
   }
